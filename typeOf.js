@@ -1,66 +1,56 @@
 //1) Необходимо написать функцию возвращающую тип принятого аргумента
-//const one = (x) => {
-//    if (typeof x === "number") {
-//        console.log('Число');
-//    } else if (typeof x === "string") {
-//        console.log('Строка');
-//    } else if (typeof x === "boolean") {
-//        console.log('True or False');
-//    } else if (typeof x === "object") {
-//        console.log('Объект');
-//    } else {
-//        console.log('NAN or undefined');
-//    }
-//};
-//one('124');
-//2 Написать функцию которая возвращает true для четных чисел, false для нечетных
-const two = (w) => {
-    if (!(w % 2)) {
-        console.log('Четная');
-    } else {
-        console.log('Нечетные')
-    }
+
+const recovery = (argument) => {
+    return (typeof argument);
 }
-//two(0);
+
+//2 Написать функцию которая возвращает true для четных чисел, false для нечетных
+const refund = (number) => (!(number % 2));
+
 //2.1 Необходимо написать функцию принимаю 1 аргумент, если аргумент строка -
 // вывести эту строку в консоль, если аргумент число - вывести в консоль четное оно или нечетное.
 // Для определения четности использовать функцию из п.2 . Для определения типа использовать функцию из п.1 .
-//const qwe = (w) => {
-//    return (typeof w);
-//}
-//qwe(2);
 
-const twoOne = (w) => {
- if (typeof w === "string") {
-     console.log(w);
- } else if (typeof w === "number") {
-     two(w);
-   } else {
-     console.log('Ошибка');
-     }
+const connect = (link) => {
+    if (recovery(link) === "string") {
+        console.log(link);
+    } else if (recovery(link) === "number") {
+        console.log(refund(link) ? 'Четное' : 'Нечетное' )
+    } else {
+        console.log('Ошибка');
+    }
 }
-  twoOne('qwrq');
+connect(124);
 
 // 3) Написать функцию которая принимает число, если число четное,
 // то необходимо умножить его на 2 и вывести в консоль результат, если число нечетное,
 // то необходимо умножить его на 3 и вывести в консоль. (функция должна быть в 2ух вариантах,
 // с ифами и с тернарным оператором)
-const plusMin = (c) => {
-    if (!(c % 2)) {
-        c = c*2;
-        console.log(c);
+const plusMin = (math) => {
+    if (math % 2) {
+        console.log(math*3);
     }
     else {
-        c = c*3;
-        console.log(c);
-        }
+        console.log(math*2);
+    }
 }
-plusMin(2);
+plusMin(3);
 
-const minPlus = (c) =>  console.log ( (!(c % 2)) ? c = c*2 : c = c*3 );
-minPlus(3);
+const minPlus = (math) =>  console.log (math % 2 ? math*3 : math*2);
+minPlus(2);
 
 //4 написать функцию которая принимает 2 аргумента
 // (аргументами могут быть числа и строки содержащие в себе числа), если оба аргумента четные,
 // то функция должна вывести на экран сумму чисел, если хотябы один из аргументов четный,
 // то функция должна вывести разницу чисел, иначе произведение чисел
+
+const smile = (one, two) => {
+    if (+one % 2) {
+        if (+two % 2) {
+            console.log(+one * +two)
+        } else {
+            console.log(+one - +two)
+        }
+    } else  (+two % 2) ? console.log(+one - +two) : console.log(+one + +two)
+}
+smile(2,'3')

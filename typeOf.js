@@ -54,3 +54,9 @@ const smile = (one, two) => {
     } else  (+two % 2) ? console.log(+one - +two) : console.log(+one + +two)
 }
 smile(2,'3')
+
+//5.Вызвать все функции кроме первых двух в конце скрипта!
+connect(1);
+plusMin(1);
+minPlus(1);
+smile(1,2);

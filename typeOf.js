@@ -20,7 +20,7 @@ const connect = (link) => {
         console.log('Ошибка');
     }
 }
-connect(124);
+//connect(124);
 
 // 3) Написать функцию которая принимает число, если число четное,
 // то необходимо умножить его на 2 и вывести в консоль результат, если число нечетное,
@@ -34,10 +34,10 @@ const plusMin = (math) => {
         console.log(math*2);
     }
 }
-plusMin(3);
+//plusMin(3);
 
 const minPlus = (math) =>  console.log (math % 2 ? math*3 : math*2);
-minPlus(2);
+//minPlus(2);
 
 //4 написать функцию которая принимает 2 аргумента
 // (аргументами могут быть числа и строки содержащие в себе числа), если оба аргумента четные,
@@ -53,14 +53,14 @@ const smile = (one, two) => {
         }
     } else  (+two % 2) ? console.log(+one - +two) : console.log(+one + +two)
 }
-smile(3,'2')
+//smile(3,'2')
 
 const smile3 = (one, two) => {
     (+one % 2 && +two % 2) ? (console.log(+one * +two)) :
         !(+one % 2) && !(+two % 2) ? console.log(+one + +two):
             console.log(+one - +two);
 };
-smile3(3, '3');
+//smile3(3, '3');
 
 //5.Вызвать все функции кроме первых двух в конце скрипта!
 connect(1);
